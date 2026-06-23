@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verify Level Up Fitness certificates — Check the authenticity of REPs UK qualifications issued by Level Up Fitness Pakistan.">
+  <title>Certificate Verification | Level Up Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-mark">Level</span><span class="nav__logo-text">Up</span></a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="courses.html" class="nav__link">Courses</a></li>
+        <li><a href="corporate.html" class="nav__link">Corporate Wellness</a></li>
+        <li><a href="success-stories.html" class="nav__link">Success Stories</a></li>
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+        <li><a href="contact.html" class="nav__link nav__link--cta">Enroll Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--short">
+      <div class="page-hero__bg"></div>
+      <div class="container page-hero__content reveal">
+        <span class="section__label">Verify Credentials</span>
+        <h1 class="page-hero__title">Certificate <span class="text-accent">Verification</span></h1>
+        <p class="page-hero__subtitle">Employers and institutions can verify the authenticity of Level Up Fitness qualifications.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="verify__wrapper reveal">
+          <form class="contact__form contact__form--light verify__form" id="verify-form">
+            <h3 class="contact__form-title">Verify a Certificate</h3>
+            <p class="contact__text">Enter the certificate number found on the graduate's qualification document.</p>
+            <div class="form__group">
+              <label for="cert-number">Certificate Number *</label>
+              <input type="text" id="cert-number" name="cert-number" placeholder="e.g. LUF-2024-00123" required>
+            </div>
+            <div class="form__group">
+              <label for="graduate-name">Graduate Name *</label>
+              <input type="text" id="graduate-name" name="graduate-name" placeholder="Full name as on certificate" required>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block btn--lg">Verify Certificate</button>
+            <div class="verify__result" id="verify-result" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2026 Level Up Fitness. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
