@@ -99,7 +99,7 @@ COURSES:
 CONTACT:
 F-7 Markaz, Islamabad, Pakistan
 Phone: 0325-5584546
-Email: info@levelupfitness.pk
+Email: im.ur.coach@outlook.com
 Web: www.levelupfitness.pk
 
 Visit levelupfitness.pk/contact to enroll.`;
@@ -166,7 +166,7 @@ Visit levelupfitness.pk/contact to enroll.`;
         verifyResult.innerHTML = `<strong>✓ Certificate Verified</strong><p>${name} holds a valid Level Up Fitness qualification.<br>Certificate: ${certNum.toUpperCase()}</p>`;
       } else {
         verifyResult.className = 'verify__result verify__result--invalid';
-        verifyResult.innerHTML = `<strong>✗ Not Found</strong><p>No matching certificate found. Please check the number and try again, or contact info@levelupfitness.pk</p>`;
+        verifyResult.innerHTML = `<strong>✗ Not Found</strong><p>No matching certificate found. Please check the number and try again, or contact im.ur.coach@outlook.com</p>`;
       }
     });
   }
