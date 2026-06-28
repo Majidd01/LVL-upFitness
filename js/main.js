@@ -31,27 +31,30 @@
     });
   }
 
-  /* ── Scroll reveal ── */
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
-  );
-  revealEls.forEach((el) => revealObserver.observe(el));
+  /* ── Scroll reveal (fallback when GSAP not loaded) ── */
+  if (!window.__lufGsap) {
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+    );
+    revealEls.forEach((el) => revealObserver.observe(el));
 
-  document.querySelectorAll('.hero .reveal, .page-hero .reveal').forEach((el) => {
-    requestAnimationFrame(() => el.classList.add('visible'));
-  });
+    document.querySelectorAll('.hero .reveal, .page-hero .reveal').forEach((el) => {
+      requestAnimationFrame(() => el.classList.add('visible'));
+    });
+  }
 
-  /* ── Counter animation ── */
-  document.querySelectorAll('[data-count]').forEach((el) => {
+  /* ── Counter animation (fallback when GSAP not loaded) ── */
+  if (!window.__lufGsap) {
+    document.querySelectorAll('[data-count]').forEach((el) => {
     const counterObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -74,7 +77,8 @@
       { threshold: 0.5 }
     );
     counterObserver.observe(el);
-  });
+    });
+  }
 
   /* ── Prospectus download ── */
   document.querySelectorAll('[data-prospectus]').forEach((btn) => {
