@@ -1927,7 +1927,7 @@ button, input, select, textarea {
     align-items: flex-start;
     justify-content: center;
     gap: var(--space-lg);
-    padding: var(--space-2xl);
+    padding: 4rem;
     background: rgba(10, 10, 10, 0.97);
     backdrop-filter: blur(20px);
     transition: right var(--duration-normal) var(--ease-out);
